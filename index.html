@@ -2,8 +2,18 @@
 <body>
 
 
-<a href="https://www.w3schools.com/php/php_superglobals_get.asp">Test $GET</a>
 
 
+<script>
+	const params = new URLSearchParams(document.location.search);
+	const u = params.get("u");
+	console.info(u); //show C
+	var a = document.createElement('a');
+	var linkText = document.createTextNode("YOUR LINK");
+	a.appendChild(linkText);
+	a.title = "COMFIRM LINK";
+	a.href = u;
+	document.body.appendChild(a);
+</script>
 </body>
 </html>
